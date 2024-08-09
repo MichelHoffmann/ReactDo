@@ -1,0 +1,154 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  max-height: max-content;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container > header {
+  width: 100%;
+  height: 200px;
+  background-color: var(--gray700);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.container header img {
+  max-height: 2.25rem;
+}
+
+.container header p {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.container header p span {
+  color: var(--purpleDark);
+}
+
+.container main {
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--gray600);
+}
+
+.container main form {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+
+  margin-top: calc(0px - 27px);
+  padding-inline: 20px;
+}
+
+.container main form input {
+  width: 100%;
+  min-width: 300px;
+  max-width: 638px;
+  height: 100%;
+  border: 1px solid var(--gray700);
+  background-color: var(--gray500);
+  padding-left: 16px;
+  border-radius: 8px;
+  color: var(--gray100);
+}
+
+.container main form input:focus {
+  outline: 0;
+}
+
+.container main form button {
+  width: 90px;
+  height: 54px;
+  background-color: var(--blueDark);
+  color: var(--gray100);
+  border: 0;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.container main form button img {
+  width: 16px;
+}
+
+.container main section {
+  min-width: 300px;
+  max-width: 736px;
+  padding-inline: 20px;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container main section header {
+  width: 736px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 64px;
+}
+
+.container main section header p {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.container main section header p:last-child {
+  color: var(--purple);
+}
+
+.container main section header p span {
+  background-color: var(--gray400);
+  color: var(--gray200);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.tasks {
+  width: 736px;
+  border-top: 1px solid var(--gray400);
+  border-radius: 8px;
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.tasks > img {
+  margin-top: 64px;
+  width: 56px;
+}
+
+.tasks > p {
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--gray300);
+  line-height: 1.4;
+}
