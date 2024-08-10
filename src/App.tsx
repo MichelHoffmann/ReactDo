@@ -51,13 +51,16 @@ export function App() {
   return (
     <div className="container">
       <header>
-        <img src={rocketLogo} alt="" />
-        <p>
-          React
-          <span>Do</span>
-        </p>
-      </header> 
-      <main>
+        <div className="header-wrapper">
+          <img src={rocketLogo} alt="" />
+          <p>
+            React
+            <span>Do</span>
+          </p>
+        </div>
+      </header>
+
+      <div className="main">
         <form>
           <input
             onChange={(e) => setInputText(e.target.value)}
@@ -73,7 +76,7 @@ export function App() {
           <header>
             <p>
               Tarefas criadas <span>{tasks.length}</span>
-            </p> n 
+            </p>
             <p>
               Concluidas <span>{completedTasks}</span>
             </p>
@@ -102,7 +105,7 @@ export function App() {
             )}
           </div>
         </section>
-      </main>
+      </div>
     </div>
   );
 }

@@ -1,11 +1,13 @@
 .task {
-  background-color: var(--gray500);
+  width: 100%;
+  max-width: 736px;
   display: flex;
-  justify-content: space-evenly;
   align-items: flex-start;
+  gap: 12px;
+
   padding: 16px;
   border-radius: 8px;
-  gap: 12px;
+  background-color: var(--gray500);
   color: var(--gray100);
 }
 
@@ -33,7 +35,7 @@
   border: 0;
   border-radius: 50%;
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
 }
 
@@ -43,12 +45,28 @@
 }
 
 .task p {
-  min-width: 630px;
+  width: 100%;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.4;
 }
 
-.task img {
-  width: 24px;
+.task .svg {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task .svg svg {
+  transition: fill 0.3s ease;
+}
+
+.task .svg:hover path {
+  fill: var(--danger);
+}
+
+.task .svg:hover {
+  cursor: pointer;
 }
