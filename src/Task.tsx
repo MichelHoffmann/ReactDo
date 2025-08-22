@@ -22,7 +22,7 @@ export function Task({
     completedTasksIncrement(checked);
   }
 
-  function deleteTask() {
+  function handleDelete() {
     handleDeleteTask(id, checked);
   }
 
@@ -31,16 +31,16 @@ export function Task({
       <input
         type="checkbox"
         name=""
-        id={content}
+        id={id}
         checked={checked}
         onChange={handleCompletedTask}
       />
-      <p id={content} onClick={handleCompletedTask}>
+      <p id={id} onClick={handleCompletedTask}>
         {content}
       </p>
       <div className="svg">
         <svg
-          onClick={deleteTask}
+          onClick={handleDelete}
           width="24"
           height="24"
           viewBox="0 0 24 24"

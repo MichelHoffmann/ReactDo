@@ -5,7 +5,7 @@ import rocketLogo from "./assets/rocket.svg";
 import plus from "./assets/plus.svg";
 import empty from "./assets/empty.svg";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { Task } from "./Task";
 
 import { v4 as uuidv4 } from "uuid";
@@ -19,6 +19,7 @@ export function App() {
   const [tasks, setTasks] = useState<TaskInterface[]>([]);
   const [completedTasks, setCompletedTasks] = useState<number>(0);
   const [inputText, setInputText] = useState<string>("");
+  const inputRef = useRef<HTMLInputElement>(null);
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
@@ -26,9 +27,13 @@ export function App() {
       alert("Digite sua proxima tarefa!");
       return;
     }
-    setTasks([...tasks, { id: uuidv4(), content: inputText }]);
+    setTasks((prevTasks) => [
+      ...prevTasks,
+      { id: uuidv4(), content: inputText },
+    ]);
     setInputText("");
-    document.querySelector("input")?.focus();
+    inputRef.current?.focus();
+    // document.querySelector("input")?.focus();
   }
 
   function handleDeleteTask(idToDelete: string, isCompleted: boolean) {
@@ -36,15 +41,21 @@ export function App() {
       (task) => task.id !== idToDelete
     );
     setTasks([...tasksWithoutDeletedOne]);
-    if (isCompleted) {setCompletedTasks(completedTasks - 1)}
+    if (isCompleted) {
+      setCompletedTasks(completedTasks - 1);
+    }
   }
 
   function completedTasksIncrement(checked: boolean) {
     if (!checked) {
-      setCompletedTasks(completedTasks >= 0 ? completedTasks + 1 : completedTasks);
+      setCompletedTasks(
+        completedTasks >= 0 ? completedTasks + 1 : completedTasks
+      );
     }
     if (checked) {
-      setCompletedTasks(completedTasks > 0 ? completedTasks - 1 : completedTasks);
+      setCompletedTasks(
+        completedTasks > 0 ? completedTasks - 1 : completedTasks
+      );
     }
   }
 
@@ -63,6 +74,7 @@ export function App() {
       <div className="main">
         <form>
           <input
+            ref={inputRef}
             onChange={(e) => setInputText(e.target.value)}
             type="text"
             value={inputText}
