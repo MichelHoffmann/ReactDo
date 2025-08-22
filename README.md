@@ -1,30 +1,37 @@
-# React + TypeScript + Vite
+# ReactDo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um gerenciador de tarefas simples desenvolvido com **React**, **TypeScript** e **Vite**. Este projeto foi criado como estudo de componentes, estado e tipagem em React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- Criar novas tarefas
+- Marcar tarefas como concluídas
+- Deletar tarefas
+- Contagem de tarefas criadas e concluídas
+- Atualização de estado de forma imutável
+- Uso de TypeScript para tipagem de estados e props
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Tecnologias
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- React
+- TypeScript
+- Vite
+- CSS modularizado
+- uuid (para IDs únicos)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
+
+## Como usar
+
+1. Clone o repositório:
+   git clone https://github.com/MichelHoffmann/ReactDo.git
+   
+3. Instale as dependências
+   npm install
+   
+5. Rode o projeto
+   npm run dev
