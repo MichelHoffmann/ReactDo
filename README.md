@@ -1,4 +1,5 @@
-# ReactDo
+<img width="527" height="108" alt="image" src="https://github.com/user-attachments/assets/6fef2d61-0931-4cc1-9ae9-55fef3168302" />
+
 
 Um gerenciador de tarefas simples desenvolvido com **React**, **TypeScript** e **Vite**. Este projeto foi criado como estudo de componentes, estado e tipagem em React.
 
